@@ -1,0 +1,9 @@
+
+on:
+  [push]
+
+jobs:
+  compile-code:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gradle build
