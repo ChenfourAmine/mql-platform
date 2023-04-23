@@ -6,4 +6,5 @@ jobs:
   compile-code:
     runs-on: ubuntu-latest
     steps:
+      - run: chmod +x ./gradlew
       - run: ./gradlew build
