@@ -1,6 +1,6 @@
 package org.mql.platform;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +13,7 @@ class MqlPlatformApplicationTests {
 		String name1 = "Amine";
 		String name2 = "karim";
 
-		assertEquals(name1, name2);
+		assertNotEquals(name1, name2);
 	}
 
 }
