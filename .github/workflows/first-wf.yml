@@ -1,10 +1,22 @@
 
-on:
-  [push]
+name: Build and Test
 
+on:
+  push:
+  
 jobs:
-  compile-code:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: chmod +x ./gradlew
-      - run: ./gradlew build
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
+      - name: Run tests
+        run: ./gradlew test
