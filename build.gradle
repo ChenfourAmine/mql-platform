@@ -2,6 +2,10 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.11'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+
+	id "io.gatling.gradle" version "3.6.1"
+
+	id 'war'
 }
 
 group = 'org.mql'
@@ -16,6 +20,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.seleniumhq.selenium:selenium-java:4.9.0'
 }
 
 tasks.named('test') {
