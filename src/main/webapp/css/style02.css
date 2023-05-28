@@ -22,11 +22,16 @@ body{
     opacity: 0.9;
 }
 
-.main-container > div >img{
-    width: 400px;
+
+
+.main-container > div {
+    width: 90%;
+    margin: 30px auto;
 }
 
-
+.main-container > div >img{
+    width: 100%;
+}
 
 
 .form > div{

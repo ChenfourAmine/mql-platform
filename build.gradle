@@ -8,6 +8,7 @@ plugins {
 	id 'war'
 }
 
+archivesBaseName = 'mql-platform'
 group = 'org.mql'
 version = '1.0.0'
 
@@ -25,4 +26,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+task localDeploy(type: Copy) {
+    dependsOn clean, war
+    from 'build/libs/mql-platform-1.0.0-plain.war'
+    into '/Users/elmehdichenfourmac/Workspace/Amine/S2/Tools/apache-tomcat-10.0.5/webapps'
 }
