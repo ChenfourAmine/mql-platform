@@ -10,13 +10,14 @@ body{
     background-color: white;
     margin: 5% auto auto auto;
     width: 70%;
-    height: 500px;
+    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2%;
 }
-
 .main-container >div >img{
-    margin-left: 18%;
+    margin: auto;
+    margin-left: 18% !important;
+    width: 75%;
 }
 
 .form > div{
